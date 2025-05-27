@@ -193,6 +193,7 @@
             reader.onloadstart = () => uploadProgress.style.display = 'block';
             reader.onload = () => {
                 photoSource.src = reader.result;
+                document.querySelector('#sky').setAttribute('src', reader.result); // Force A-Frame update
                 photoPreview.src = reader.result;
                 photoPreview.style.display = 'block';
                 uploadProgress.style.display = 'none';
