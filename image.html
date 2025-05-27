@@ -236,6 +236,10 @@
         if (window.location.protocol !== 'https:' && window.location.hostname !== 'localhost') {
             alert('Gyroscope and motion events require HTTPS or localhost.');
         }
+        // Trigger file input when upload area is clicked
+uploadArea.addEventListener('click', () => {
+    fileInput.click();
+});
     </script>
 </body>
 </html>
